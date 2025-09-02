@@ -20,6 +20,8 @@ jest.config.js
 .prettierrc
 .prettierrc.json
 .editorconfig
+pnpm-lock.yaml
+package-lock.json
 
 # Development files
 .gitignore

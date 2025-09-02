@@ -1,5 +1,5 @@
 {
-  "name": "logique-log",
+  "name": "@logique/logique-log",
   "version": "1.0.0-rc-0",
   "description": "Pacakge for debug log with console with flagging and write sql query",
   "main": "index.js",

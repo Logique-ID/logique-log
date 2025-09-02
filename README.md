@@ -6,9 +6,7 @@ This package for print console log, warn, table, info, error and write sql to fi
 
 ## Usage
 
-### Basic Example
-
-Typescript version
+### Basic Example Typescript Version
 
 ```typescript
 import { createLog } from 'logique-log';
@@ -22,9 +20,9 @@ createLog({
 });
 ```
 
-### With Configuration
+### With Configuration Typescript version
 
-Sample configration with flag control, Typescript version :
+Sample configration with flag control :
 
 ```typescript
 import { createLog, createLogConfig, writeSqlQuery } 'logique-log';
@@ -44,7 +42,7 @@ createLog({
 });
 ```
 
-Create log set off and sql query set to true, Typescript version :
+Create log set off and sql query set to true :
 
 ```typescript
 import { createLog, createLogConfig, writeSqlQuery } 'logique-log';
