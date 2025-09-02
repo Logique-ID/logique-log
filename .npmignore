@@ -1,6 +1,5 @@
 # Source files
 src/
-*.ts
 *.tsx
 .env
 

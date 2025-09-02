@@ -2,6 +2,12 @@
 
 This package for print console log, warn, table, info, error and write sql to file.
 
+[![made-with-nodejs](https://img.shields.io/badge/Made%20with-Nodejs-1f425f.svg)](https://nodejs.org)
+[![Create](https://img.shields.io/badge/Created%20by-Logique-1f425f.svg)](https://www.logique.co.id/)
+[![GitHub release](https://img.shields.io/github/release/Logique-ID/logique-log.svg)](https://github.com/Logique-ID/logique-log/releases)
+[![GitHub issues](https://img.shields.io/github/issues/Logique-ID/logique-log.svg)](https://github.com/Logique-ID/logique-log/issues/)
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/Logique-ID/logique-log.svg)](https://github.com/Logique-ID/logique-log/pulls/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![License](https://img.shields.io/github/license/redis/node-redis.svg)](https://github.com/Logique-ID/logique-log/blob/master/LICENSE)
 
 ## Usage
@@ -46,6 +52,61 @@ Create log set off and sql query set to true :
 
 ```typescript
 import { createLog, createLogConfig, writeSqlQuery } 'logique-log';
+
+// set in top level by env or static value default 1 or true is active
+createLogConfig({
+  logging: {
+    enabled: 0,
+    enableSqlQuery: 1,
+  },
+});
+
+// this log not print in terminal or stdout
+createLog({
+  title: "Users",
+  message: "data users",
+  type: "log",
+});
+
+writeSqlQuery("query.sql", "SELECT * FROM users");
+```
+
+### Basic Example Commonjs Version
+
+```javascript
+const { createLog } = require('logique-log')
+// by default flag log is active
+createLog({
+  message: 'info',
+  type: 'info',
+})
+```
+
+### With Configuration Commonjs version
+
+Sample configration with flag control :
+
+```javascript
+const { createLog, createLogConfig, writeSqlQuery } = require('logique-log')
+// set in top level by env or static value default 1 or true is active
+createLogConfig({
+  logging: {
+    enabled: 1,
+    enableSqlQuery: 0,
+  },
+});
+
+createLog({
+  title: "Users",
+  message: "data users",
+  type: "log",
+});
+```
+
+Create log set off and sql query set to true :
+
+```typescript
+const { createLog, createLogConfig, writeSqlQuery } = require('logique-log')
 
 // set in top level by env or static value default 1 or true is active
 createLogConfig({

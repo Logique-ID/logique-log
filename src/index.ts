@@ -4,12 +4,15 @@ import { LogOptions, checkLogActive, initConfig } from "./lib";
 const { isLogActive, isSqlQueryActive } = checkLogActive();
 
 /**
+ * Create log with specified format
  *
- * Create log
  * @export
- * @template T
- * @param {LogOptions<T>} options
- * @return {*}  {void}
+ * @template T - Data type for log message
+ * @param {LogOptions<T>} options - Options for creating log
+ * @param {LogType} options.type - Log type ("log", "info", "warn", "error", "debug", "table")
+ * @param {string} [options.title] - Log title (optional)
+ * @param {T} options.message - Message/data to be logged
+ * @return {void} Returns nothing
  */
 export function createLog<T>(options: LogOptions<T>): void {
   if (!isLogActive) return;
@@ -27,9 +30,9 @@ export function createLog<T>(options: LogOptions<T>): void {
 /**
  *
  * Write SQL query to file
- * @param {string} filename
- * @param {string} sql
- * @return {*}
+ * @param {string} filename - Filename to write SQL query
+ * @param {string} sql - SQL query to write
+ * @return {void} Returns nothing
  */
 export const writeSqlQuery = (filename: string, sql: string) => {
   if (!isSqlQueryActive) return;

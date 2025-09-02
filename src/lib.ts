@@ -16,8 +16,13 @@ export type Config = {
 let globalConfig: Config = {};
 
 /**
- * Init global configuration
- * Can override env values
+ * Initialize global configuration for logging settings
+ *
+ * @param {Config} config - Configuration object containing logging options
+ * @param {Object} config.logging - Logging configuration settings
+ * @param {boolean|number} [config.logging.enabled] - Enable/disable all logging (defaults to true)
+ * @param {boolean|number} [config.logging.enableSqlQuery] - Enable/disable SQL query logging (defaults to true)
+ * @returns {void} Nothing
  */
 export function initConfig(config: Config) {
   globalConfig = config;
