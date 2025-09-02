@@ -8,24 +8,24 @@
     "build": "tsc"
   },
   "keywords": [
-		"logique",
-		"logique-log",
-		"logique-log-console",
-		"logique-log-console-flagging",
-		"logique-log-console-table",
-		"logique-log-write-sql-query",
+    "logique",
+    "logique-log",
+    "logique-log-console",
+    "logique-log-console-flagging",
+    "logique-log-console-table",
+    "logique-log-write-sql-query",
     "debug",
     "log",
     "console",
     "flagging",
     "redact",
-		"write-sql-query"
+    "write-sql-query"
   ],
-	"author": "Logique Digital Indonesia",
+  "author": "Logique Digital Indonesia",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Logique-ID/logique-log.git"
+    "url": "git+https://github.com/Logique-ID/logique-log.git"
   },
   "bugs": {
     "url": "https://github.com/Logique-ID/logique-log/issues"
