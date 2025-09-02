@@ -2,6 +2,7 @@ name: Publish Package
 
 on:
   push:
+    branches: [main]
     tags:
       - "*.*.*" # contoh: 1.0.0
 
@@ -15,7 +16,15 @@ jobs:
         with:
           node-version: 20
           registry-url: "https://registry.npmjs.org"
-      - run: npm run build
-      - run: npm publish --access public
+          cache: "pnpm"
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+          run_install: false
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
