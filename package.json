@@ -1,6 +1,6 @@
 {
   "name": "logique-log",
-  "version": "1.0.0-rc-1",
+  "version": "1.0.0-rc-2",
   "description": "package for debug log with console with flagging and write sql query",
   "main": "index.js",
   "scripts": {
