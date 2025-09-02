@@ -2,6 +2,7 @@
 src/
 *.ts
 *.tsx
+.env
 
 # Test files
 test/
@@ -39,7 +40,6 @@ docs/
 # Examples
 examples/
 demo/
-dist/
 
 # Coverage
 coverage/
