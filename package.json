@@ -1,38 +1,39 @@
 {
-  "name": "@logique/logique-log",
-  "version": "1.0.0-rc-0",
-  "description": "package for debug log with console with flagging and write sql query",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
-  },
-  "keywords": [
-    "logique",
-    "logique-log",
-    "logique-log-console",
-    "logique-log-console-flagging",
-    "logique-log-console-table",
-    "logique-log-write-sql-query",
-    "debug",
-    "log",
-    "console",
-    "flagging",
-    "redact",
-    "write-sql-query"
-  ],
-  "author": "Logique Digital Indonesia",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Logique-ID/logique-log.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Logique-ID/logique-log/issues"
-  },
-  "homepage": "https://github.com/Logique-ID/logique-log#readme",
-  "devDependencies": {
-    "@types/node": "^24.3.0",
-    "typescript": "^5.9.2"
-  }
+	"name": "logique-log",
+	"version": "1.0.0-rc-3",
+	"description": "package for debug log with console with flagging and write sql query",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "tsc"
+	},
+	"keywords": [
+		"logique",
+		"logique-log",
+		"logique-log-console",
+		"logique-log-console-flagging",
+		"logique-log-console-table",
+		"logique-log-write-sql-query",
+		"debug",
+		"log",
+		"console",
+		"flagging",
+		"redact",
+		"write-sql-query"
+	],
+	"author": "Logique Digital Indonesia",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Logique-ID/logique-log.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Logique-ID/logique-log/issues"
+	},
+	"homepage": "https://github.com/Logique-ID/logique-log#readme",
+	"devDependencies": {
+		"@types/node": "^24.3.0",
+		"typescript": "^5.9.2"
+	}
 }

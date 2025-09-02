@@ -1,4 +1,4 @@
-# Logique Print
+# Logique Log
 
 This package for print console log, warn, table, info, error and write sql to file.
 
