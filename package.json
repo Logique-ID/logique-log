@@ -1,6 +1,6 @@
 {
 	"name": "logique-log",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "package for debug log with console with flagging and write sql query",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
