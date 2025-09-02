@@ -2,7 +2,7 @@ name: Publish Package
 
 on:
   push:
-    # branches: [main]
+    branches: [main]
     tags:
       - "*.*.*" # contoh: 1.0.0
 
@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 20
           registry-url: "https://registry.npmjs.org"
-      - run: npm ci --include=dev
+      - run: npm ci
       - run: npm run build
       - run: npm publish --access public
         env:
