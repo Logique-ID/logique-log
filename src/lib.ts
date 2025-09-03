@@ -26,6 +26,17 @@ let globalConfig: Config = {};
  */
 export function initConfig(config: Config) {
   globalConfig = config;
+  if (globalConfig.logging?.enabled) {
+    console.info("✅ Logique log is active");
+  } else {
+    console.info("❌ Logique log is not active");
+  }
+
+  if (globalConfig.logging?.enableSqlQuery) {
+    console.info("✅ Logique log write sql is active");
+  } else {
+    console.info("❌ Logique log write to sql is not active");
+  }
 }
 /**
  *

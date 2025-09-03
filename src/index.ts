@@ -1,8 +1,6 @@
 import fs from "fs";
 import { LogOptions, checkLogActive, initConfig } from "./lib";
 
-const { isLogActive, isSqlQueryActive } = checkLogActive();
-
 /**
  * Create log with specified format
  *
@@ -15,6 +13,8 @@ const { isLogActive, isSqlQueryActive } = checkLogActive();
  * @return {void} Returns nothing
  */
 export function createLog<T>(options: LogOptions<T>): void {
+  const { isLogActive } = checkLogActive();
+
   if (!isLogActive) return;
 
   const { type, title, message } = options;
@@ -35,6 +35,7 @@ export function createLog<T>(options: LogOptions<T>): void {
  * @return {void} Returns nothing
  */
 export const writeSqlQuery = (filename: string, sql: string) => {
+  const { isSqlQueryActive } = checkLogActive();
   if (!isSqlQueryActive) return;
   fs.writeFile(filename, sql, (err: any) => {
     if (err) {

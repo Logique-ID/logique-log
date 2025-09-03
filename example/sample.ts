@@ -2,7 +2,7 @@ import { createLog, createLogConfig, writeSqlQuery } from "../src";
 
 createLogConfig({
   logging: {
-    enabled: 0,
+    enabled: 1,
     enableSqlQuery: 0,
   },
 });
